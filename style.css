@@ -20,7 +20,7 @@ header{height: 4%;
 #navbar li {list-style-type: none;
 }
 #item, #icon{display: flex;
-			justify-content: space-evenly;}
+			justify-content: space-around;}
 #item li, #icon img {display: inline-block;
 				  }
 #item li{font-size: 14pt;
