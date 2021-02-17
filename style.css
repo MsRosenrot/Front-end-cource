@@ -1,0 +1,29 @@
+body{
+	height: 100vh;
+background: url("eagle.png") no-repeat center/cover;
+margin: 0;}
+#wrapper{max-width: 1000px;
+		height: 100%;
+		margin: 0 auto;
+		padding: 0px 50px;
+	}
+header{height: 4%;
+		width: 100%;
+		padding-top: 3%;
+	}
+#logo{float: left;}
+#navbar{display: flex;
+		justify-content: space-between;
+		align-items: center;
+		float: right;
+		width: 52%;}
+#navbar li {list-style-type: none;
+}
+#item, #icon{display: flex;
+			justify-content: space-evenly;}
+#item li, #icon img {display: inline-block;
+				  }
+#item li{font-size: 14pt;
+		color: white;
+		font-family: 'Montserrat', sans-serif;}
+
