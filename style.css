@@ -4,10 +4,26 @@ background: url("eagle.png") no-repeat center/cover;
 margin: 0;}
 #wrapper{
 		max-width: 1000px;
-		height: 100%;
+		height: 100vh;
 		margin: 0 auto;
 		padding: 0px 50px;
 	}
+	/*Не понимаю, почему не работает, поясните пожалуйста*/
+@media (max-width: 1000px;){
+	#wrapper{
+		max-width: 970px;
+	}
+}
+@media (max-width: 970px;){
+	#wrapper{
+		max-width: 750px;
+	}
+}
+@media (max-width: 767px;){
+	#wrapper{
+		max-width: none;
+	}
+}
 header{height: 4%;
 		width: 100%;
 		margin-top: 3%;
@@ -37,29 +53,25 @@ header{height: 4%;
 				color: #fce38a;
 				transition-duration: 0.8s;
 }
-#item a:hover + #about{text-decoration: none;
-		font-size: 14pt;
-		   color: white;
-		   font-family: 'Montserrat', sans-serif;
-		   border-bottom: none;
-		}
+
 #icon li{display: inline-block;}
 .main{
 	background-color: rgba(255, 0, 0,.7);
-
+	text-align: center;
+	width: 100%;
+	position: relative;
+	top: 10%;
 }
-#creative {;
-	font-size: 72pt;
+#creative {display: inline-block;
+		   font-size: 60pt;
 		   color: white;
 		   font-family: 'Kaushan Script', cursive;
 		}
-#creative span{display: flex;
-	justify-content: center;
-	align-content: center}
-#welcome span{font-size: 150pt;
-		   color: white;
-		   font-family: 'Montserrat', sans-serif;
-		   font-weight: bold;
-		   width: 100%;
-			text-align: justify;}
+#welcome{display: inline-block;
+		 font-size: 72pt;
+		 color: white;
+		 font-family: 'Montserrat', sans-serif;
+		 font-weight: bold;}
+
+
 
