@@ -1,77 +1,114 @@
+html{
+	padding: 0;
+}
 body{
-	height: 100vh;
-background: url("eagle.png") no-repeat center/cover;
-margin: 0;}
+	margin:0;
+	padding: 0;
+	background-color: #0e0f13;
+}
 #wrapper{
-		max-width: 1000px;
-		height: 100vh;
-		margin: 0 auto;
-		padding: 0px 50px;
-	}
-	/*Не понимаю, почему не работает, поясните пожалуйста*/
-@media (max-width: 1000px;){
-	#wrapper{
-		max-width: 970px;
-	}
-}
-@media (max-width: 970px;){
-	#wrapper{
-		max-width: 750px;
-	}
-}
-@media (max-width: 767px;){
-	#wrapper{
-		max-width: none;
-	}
-}
-header{height: 4%;
-		width: 100%;
-		margin-top: 3%;
-	}
-#logo{float: left;}
-#navbar{display: flex;
+	width: 70vw;
+	height: 100vh;
+	margin: 0 auto;
 	position: relative;
-	bottom: 50%;
-		justify-content: space-between;
-		align-items: center;
-		float: right;
-		}
-#navbar li {list-style-type: none;
 }
-#item, #icon{display: flex;
-			align-items: center;
-			}
-#item li {display: inline-block;
-				  width: 100px;
-		}
-#item a{text-decoration: none;
-		font-size: 14pt;
-		   color: white;
-		   font-family: 'Montserrat', sans-serif;
-		}
-#item a:hover{border-bottom: 1px solid #fce38a;
-				color: #fce38a;
-				transition-duration: 0.8s;
+#blured{
+	width: 50%;
+	height: 35%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+#blured a{
+	text-decoration: none;
+	color: transparent;
+	/*Здесь же ссылка не видна должна быть,
+	почему при загрузке все равно мелькает синий цвет?*/
+	text-shadow: 0px 0px 6px #fff;
+	font-size: 200%;
+	text-transform: uppercase;
+	transition: all 1s linear;
+}
+#blured div{
+	transition: 1s ease-out;
+}
+#blured:hover a, #blured a:hover, #blured div:hover{
+	transition: 1s;
+}
+#blured:hover a{
+	text-shadow: 0px 0px 9px #fff;
+}
+#blured a:hover{
+	text-shadow: 0px 0px #fff;
 }
 
-#icon li{display: inline-block;}
-.main{
-	background-color: rgba(255, 0, 0,.7);
-	text-align: center;
-	width: 100%;
+#blured div:hover{
+	transform: scale(1.5);
+}
+#indicator_1{
+	width: 5vw;
+	height: 5vw;
+	background-color: white;
+	margin: 5vw auto 0;
+	animation: rotation 1s linear infinite;
+}
+@keyframes rotation {
+	50%{
+		transform: rotate3d(0, -1, 0, 0.5turn);
+	}
+	to{
+		transform: rotate3d(0, 0, 1, 0.5turn);
+	}
+}
+#indicator_2{
+	width: 5vw;
+	height: 5vw;
+	margin: 5vw auto 0;
 	position: relative;
-	top: 10%;
+	box-sizing: border-box;
 }
-#creative {display: inline-block;
-		   font-size: 60pt;
-		   color: white;
-		   font-family: 'Kaushan Script', cursive;
-		}
-#welcome{display: inline-block;
-		 font-size: 72pt;
-		 color: white;
-		 font-family: 'Montserrat', sans-serif;
-		 font-weight: bold;}
-
-
+#square_1, #square_2{
+	width: 10px;
+	height: 10px;
+	background-color: white;
+}
+#square_1{
+	animation: first 2s linear infinite;
+}
+#square_2{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	animation: second 2s linear infinite;
+}
+@keyframes first{
+	25%{
+		transform: translateX(5vw) rotate(90deg) scale(2); 
+	}
+	50%{
+		transform: translate(5vw, 5vw) rotate(180deg);
+	}
+	75%{
+		transform: translate(0, 5vw) rotate(270deg) scale(2);
+	}
+	100%{
+		transform: translate(0, 0) rotate(360deg);
+	}
+}
+@keyframes second{
+	25%{
+		transform: translateX(-5vw) rotate(90deg) scale(2); 
+	}
+	50%{
+		transform: translate(-5vw, -5vw) rotate(180deg);
+	}
+	75%{
+		transform: translate(0, -5vw) rotate(270deg) scale(2);
+	}
+	100%{
+		transform: translate(0, 0) rotate(360deg);
+	}
+}
 
