@@ -1,114 +1,187 @@
-html{
-	padding: 0;
-}
-body{
-	margin:0;
-	padding: 0;
-	background-color: #0e0f13;
-}
-#wrapper{
-	width: 70vw;
-	height: 100vh;
-	margin: 0 auto;
-	position: relative;
-}
-#blured{
-	width: 50%;
-	height: 35%;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-}
-#blured a{
-	text-decoration: none;
-	color: transparent;
-	/*Здесь же ссылка не видна должна быть,
-	почему при загрузке все равно мелькает синий цвет?*/
-	text-shadow: 0px 0px 6px #fff;
-	font-size: 200%;
-	text-transform: uppercase;
-	transition: all 1s linear;
-}
-#blured div{
-	transition: 1s ease-out;
-}
-#blured:hover a, #blured a:hover, #blured div:hover{
-	transition: 1s;
-}
-#blured:hover a{
-	text-shadow: 0px 0px 9px #fff;
-}
-#blured a:hover{
-	text-shadow: 0px 0px #fff;
-}
 
-#blured div:hover{
-	transform: scale(1.5);
-}
-#indicator_1{
-	width: 5vw;
-	height: 5vw;
-	background-color: white;
-	margin: 5vw auto 0;
-	animation: rotation 1s linear infinite;
-}
-@keyframes rotation {
-	50%{
-		transform: rotate3d(0, -1, 0, 0.5turn);
-	}
-	to{
-		transform: rotate3d(0, 0, 1, 0.5turn);
+@media (min-width: 1400px){
+	.container-xxl{
+		max-width: 1240px !important;
 	}
 }
-#indicator_2{
-	width: 5vw;
-	height: 5vw;
-	margin: 5vw auto 0;
-	position: relative;
+.container_fluid.container-xxl{
 	box-sizing: border-box;
 }
-#square_1, #square_2{
-	width: 10px;
-	height: 10px;
-	background-color: white;
+#logo, .logo_full{
+	max-width: 100%;
+    max-height: 100%;
+    width: 118px;
 }
-#square_1{
-	animation: first 2s linear infinite;
+.navbar-brand{
+	margin-left: 20px;
 }
-#square_2{
+.nav-item{
+	line-height: 1.25em;
+}
+.nav-link{
+	color: #326fbb;
+	font-size: 14px;
+	position: relative;
+}
+.dropdown-item{
+	color: #326fbb !important;
+	font-size: 14px;
+}
+.dropdown-item:hover{
+	color: #257315 !important;
+	background-color: transparent !important;
+}
+.nav-link span::before{
+	content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 7px;
+    height: 1px;
+    border-bottom: 1px solid #dcdcdc;
+    opacity: 0;
+    transition: 300ms;
+}
+.nav-link span:hover::before{
+	opacity: 1;
+	transition-duration: 300ms;
+}
+.nav-link span:hover{
+	color: #257315;
+}
+#navbarDropdownMenuLink:hover{
+	color: #257315;
+}
+.dropdown-toggle:focus::after{
+	transform: rotate(180deg);
+}
+.dropdown-menu{
+	-webkit-box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.64); 
+	box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.64);
+}
+.navbar-collapse{
+	position: relative;
+}
+.navbar-nav::after{
+	content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 1px;
+    border-bottom: 1px solid #dcdcdc;
+    opacity: 1;
+}
+.navbar-toggler{
+	background-color: rgba(93,163,47, 0.5) !important;
+}
+.navbar-toggler.my_toggler{
+	border-color: rgba(0, 128, 0, 0.8);
+	border-radius: 0;
+	padding: 5px;
+	margin-right: 10px;
+}
+.my_toggler .navbar-toggler-icon{
+	background-image: url( 
+"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 128, 0, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); 
+        } 
+ .container-fluid div{
+ 	height: 40px;
+ }
+ .row div{
+ 	border: 1px solid black;
+ 	padding: 0px;
+ }
+ .container-fluid{
+ 	background-color: rgb(0, 128, 0);
+ }
+ .col-md-2 span{
+ font: 700 19px/24px 'Open Sans Condensed',Arial,Helvetica,sans-serif;
+ text-transform: uppercase;
+ position: relative;
+ color: white;
+}
+.sup{
 	position: absolute;
-	bottom: 0px;
-	right: 0px;
-	animation: second 2s linear infinite;
+	top: .8em !important;
+	font: 400 12px/17px 'Open Sans Condensed',Arial,Helvetica,sans-serif;
 }
-@keyframes first{
-	25%{
-		transform: translateX(5vw) rotate(90deg) scale(2); 
-	}
-	50%{
-		transform: translate(5vw, 5vw) rotate(180deg);
-	}
-	75%{
-		transform: translate(0, 5vw) rotate(270deg) scale(2);
-	}
-	100%{
-		transform: translate(0, 0) rotate(360deg);
+.btn{
+	padding-left: 0 !important;
+	display: block;
+	width: 100%;
+}
+svg{ margin-bottom: 5px;
+}
+@media (max-width: 768px){
+	.col-md-1{
+		display: none;
 	}
 }
-@keyframes second{
-	25%{
-		transform: translateX(-5vw) rotate(90deg) scale(2); 
+@media (max-width: 1045px){
+	sup{
+		display: none;
 	}
-	50%{
-		transform: translate(-5vw, -5vw) rotate(180deg);
+}
+@media (max-width: 850px){
+	#cart {
+		display: none;
 	}
-	75%{
-		transform: translate(0, -5vw) rotate(270deg) scale(2);
-	}
-	100%{
-		transform: translate(0, 0) rotate(360deg);
-	}
+}
+#catalogue{
+	background-color: #5da22f;
+}
+/* АНИМАЦИЮ СДЕЛАЙ!
+#cataloque::before{
+	content: '';
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('stripe.png');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    animation: stripe 5s cubic-bezier(1,1,1,1) 3s infinite;
+    z-index: 2;
+    transition: 300ms;
 }
 
+@keyframes stripe{
+	from{
+
+	}
+}
+*/
+input{
+	width: 100%;
+	border-radius: 5px;
+	border: none;
+	margin-top: 6px !important;
+}
+input[type="submit"] {
+    width: 20px; /* Ширина кнопки */
+    height: 20px; /* Высота кнопки */
+    border: none; /* Убираем рамку */
+    background: url(lupa.svg) no-repeat 50% 50%;
+   }
+.badge{
+	font-size: 14px !important;
+    font-style: normal !important;
+    height: 22px;
+    border-radius: 2px;
+    text-align: center;
+    min-width: 19px;
+    margin: 0 0 0 10px;
+    padding: 0 !important;
+    background: #8ed348 linear-gradient(to bottom,#8ed348,#73ae37);
+}
+.col-sm-2{
+	background-color: transparent;
+	transition-duration: 300ms;
+}
+.col-sm-2:hover{
+	background-color: #5da22f;
+	transition-duration: 300ms;
+}
