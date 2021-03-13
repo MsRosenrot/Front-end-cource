@@ -4,16 +4,16 @@
 	<title>Интернет-магазин 24shop.by: Доставка по Минску и РБ, более 100 000 товаров</title>
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<nav class="navbar navbar-expand-md">
   <div class="container-xxl">
     <a class="navbar-brand" href="#">
     	<picture>
-    		<source srcset="logo_full.svg" type="image/svg" class="logo_full" media="(min-width: 768px)">
+    		<source srcset="logo_full.svg" type="image/svg" class="logo_full" media="(max-width: 2000px)">
     		<source srcset="logo.svg" type="image/svg" id="logo_mobile" media="(max-width: 768px)">
     		<img src="logo.svg" class="logo_full" alt="">
     	</picture>
@@ -78,13 +78,53 @@
 			</div>
 			<div class="col-md-2 col-sm-2">
 				<button type="button" class="btn">
+          <svg id="cart_image" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-cart3" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+          </svg>
 				<span id="cart">корзина</span><span class="badge">0</span></button>
 			</div>
 			<div class="col-md-1 hidden-md">
-				4
+				<img src="scales.svg" width="16px" height="16px"><span class="badge">0</span>
 			</div>
 		</div>
 	</div>
+</div>
+<div class="container-xxl" style="margin-top: 20px; padding-left: 0; padding-top: 0">
+  <div id="iframe">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2350.186745333152!2d27.57295461585978!3d53.9106573801012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcfbcf5215555%3A0x92afd4cd2ee703b!2z0JPQvtGB0LrQsNGA0YLQs9C10L7RhtC10L3RgtGA!5e0!3m2!1sru!2sby!4v1615628248273!5m2!1sru!2sby" width="100%" height="450" style="border-radius: 5px;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+  </div>
+
+<div class="container-xxl">
+  <div class="row justify-content-between">
+    <div class="col-lg-3 col-md-5 row">
+      <div class="col-8" style="padding-left: 5px; align-items: center;">
+        <h3>Доставка по Беларуси</h3>
+        <span>Минск, Брест, Витебск и ещё 109 городов</span>
+      </div>
+      <div class="col-4">
+        <img src="first.jpg" alt="" class="my_image">
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-5 row">
+      <div class="col-8 inner-cols" style="padding-left: 5px;">
+        <h3>Рассрочка до 8 мес.</h3>
+        <span>Халва, Карта покупок, Черепаха...</span>
+      </div>
+      <div class="col-4">
+        <img src="Second.jpg" alt="" class="my_image">
+      </div>
+    </div>
+    <div class="col-lg-3 hidden-md row" id="Hide">
+      <div class="col-8 inner-cols" style="padding-left: 5px;">
+        <h3>Уценка</h3>
+        <span>Большая скидка за маленький дефект</span>
+      </div>
+      <div class="col-4">
+        <img src="Third.png" alt="" class="my_image">
+      </div>
+    </div>
+  </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
